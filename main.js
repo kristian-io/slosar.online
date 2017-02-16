@@ -13,23 +13,23 @@ var transitionSpeed = 1500;
 
 var flow     = [
   {
-    msgs: ['Hello.', 'Thanks for visiting me!', 'I am very humbled by your visit!!!'],
-    option: 'Who are you???',
+    msgs: ['Hello.', 'Thanks for visiting me!', 'I am very bumbled by your visit!!!', '*humbled'],
+    option: 'Hi. Who are you???',
   },
   {
     msgs: ['My name is Kristian Slosar, I am 24 years old, currently living in Bratislava, Slovakia,', 'Europe,', 'Earth,', ' &#x2661 Milky Way!' ],
     option: 'What do you do? ',
   },
   {
-    msgs: ['I like to program, currently learning full stack javascript, apart from that I work in IT.', 'I think and dream a lot about tech, culture and the future!'],
+    msgs: ['I enjoy coding/ developing, currently learning full stack javascript, apart from that I work in IT.', 'I think and dream a lot about tech, culture and the future!'],
     option: "That's cool. What do you like to do?",
   },
   {
-    msgs: ['I like to read, a lot!',  'Mostly non fiction, blogs, essays, opinions, especially on hacker news, medium.com and Pocket.', 'Books as well!', 'Recently read...', 'Essentialism by Greg McKeown', 'The Power of Habit by Charles Duhigg', 'The Obstacle is the Way from Ryan Holiday'],
+    msgs: ['I like to read, a lot!',  'Mostly non fiction, blogs, essays, opinions, especially on hacker news, medium.com and Pocket.', 'Anything from personal development, science, software, tech, business... ','Books as well!', 'Recently read...', 'Essentialism by Greg McKeown', 'The Power of Habit by Charles Duhigg', 'The Obstacle is the Way from Ryan Holiday'],
     option: 'Ahaaa, what else?'
   },
   {
-    msgs: ['I am interested in everything related to Artificial Intelligence.', 'Like, how will technological syngularity come about and what exactly will happen after?', ' Will we be ready for it, culturally and politically?' ],
+    msgs: ['I am interested in everything related to Artificial Intelligence.', 'Like, how will technological syngularity come about and what exactly will happen after?', ' Are we going to be ready for it, culturally and politically?' ],
     option: 'Hmmmm...'
   },
   {
@@ -37,7 +37,7 @@ var flow     = [
     option: 'Maybe...'
   },
   {
-    msgs: ['All right, it was fun chatting with you!', 'Contact me on Linkedin, Twitter, or check out my GitHub profile' ],
+    msgs: ['All right, thanks for the chat  !', 'Contact me on Linkedin, Twitter, or check out my GitHub profile.' ],
     option: undefined
   }
 ];
