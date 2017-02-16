@@ -136,20 +136,40 @@ h1,h3 {
   opacity: 0.9;
 }
 
-/*mobile devices*/
-@media (max-width: 450px) {
-  .chat-container {
-    padding: 5px;
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+
+
+/*animations*/
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
   }
-  body {
-        /*background-color: pink;*/
-  }
-  .my-pic {
-    width: 40px;
-    /*position: relative;*/
-    /*top: 20px;*/
+
+  50% {
+    opacity: 1;
   }
 }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
 
 
 #dot1 {
@@ -187,6 +207,28 @@ h1,h3 {
     top: -5px;
   }
 }
+@-webkit-keyframes bounce1 {
+  from {
+    position: relative;
+    top: 3px;
+  }
+
+  to {
+    position: relative;
+    top: -5px;
+  }
+}
+@-moz-keyframes bounce1 {
+  from {
+    position: relative;
+    top: 3px;
+  }
+
+  to {
+    position: relative;
+    top: -5px;
+  }
+}
 
 @keyframes bounce2 {
   from {
@@ -199,8 +241,7 @@ h1,h3 {
     top: -5px;
   }
 }
-
-@keyframes bounce3 {
+@-webkit-keyframes bounce2 {
   from {
     position: relative;
     top: 3px;
@@ -209,5 +250,44 @@ h1,h3 {
   to {
     position: relative;
     top: -5px;
+  }
+}
+
+@-webkit-keyframes bounce3 {
+  from {
+    position: relative;
+    top: 3px;
+  }
+
+  to {
+    position: relative;
+    top: -5px;
+  }
+}
+@-webkit-keyframes bounce3 {
+  from {
+    position: relative;
+    top: 3px;
+  }
+
+  to {
+    position: relative;
+    top: -5px;
+  }
+}
+
+
+/*mobile devices*/
+@media (max-width: 450px) {
+  .chat-container {
+    padding: 5px;
+  }
+  body {
+        /*background-color: pink;*/
+  }
+  .my-pic {
+    width: 40px;
+    /*position: relative;*/
+    /*top: 20px;*/
   }
 }
