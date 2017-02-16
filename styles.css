@@ -26,7 +26,8 @@ body {
 
 .header {
   padding-top: 10px;
-  /*background-color: #e5f2ff;*/
+  background-color: #e5f2ff;
+  min-height: 40%;
   border-bottom: 1px dotted  gray;
   /*box-shadow: 0px 2px 5px gray;*/
 }
@@ -184,7 +185,7 @@ h1,h3 {
   animation-duration: 0.5s;
   animation-name: bounce2;
   animation-iteration-count: infinite;
-  animation-delay: 0.3s;
+  animation-delay: 0.2s;
   animation-direction: alternate;
 }
 
@@ -192,7 +193,7 @@ h1,h3 {
   animation-duration: 0.5s;
   animation-name: bounce3;
   animation-iteration-count: infinite;
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
   animation-direction: alternate;
 }
 

@@ -1,12 +1,14 @@
 $( document ).ready(function() {
 
+    //we are starting at 0 and then it goes recursivelly till the end.
     sendBatch(0);
     // typing();
 });
 
-
+//initialize vars and flow array
 var step = 0;
 var typingSpeed = 2000;
+var transitionSpeed = 1500;
 
 
 var flow     = [
@@ -15,54 +17,75 @@ var flow     = [
     option: 'Who are you???',
   },
   {
-    msgs: ['My name is Kristian Slosar, I am 24 years old and live in Bratislava, Slovakia.', 'Europe,', 'Earth,', 'Milky Way' ],
-    option: 'What do you do?',
+    msgs: ['My name is Kristian Slosar, I am 24 years old, currently living in Bratislava, Slovakia,', 'Europe,', 'Earth,', ' &#x2661 Milky Way!' ],
+    option: 'What do you do? ',
   },
   {
-    msgs: ['I like to program, currently learning full stack javascript, appart from that I work in IT.', 'I dream a lot about tech and the future!'],
-    option: 'What do you like?',
+    msgs: ['I like to program, currently learning full stack javascript, apart from that I work in IT.', 'I think and dream a lot about tech, culture and the future!'],
+    option: "That's cool. What do you like to do?",
   },
   {
-    msgs: ['I like to read, mostly non fiction, I am a big user of medium.com and Pocket.', 'Books as well!', ' I am interested in everything related to AI. Like, what the future with AI will look like?', ' Will it be good, bad? Who knows...' ],
-    option: 'I want to get in touch with the REAL you!'
+    msgs: ['I like to read, a lot!',  'Mostly non fiction, blogs, essays, opinions, especially on hacker news, medium.com and Pocket.', 'Books as well!', 'Recently read...', 'Essentialism by Greg McKeown', 'The Power of Habit by Charles Duhigg', 'The Obstacle is the Way from Ryan Holiday'],
+    option: 'Ahaaa, what else?'
   },
   {
-    msgs: ['All right human, it was fun chatting with you!', 'Here you go' ],
+    msgs: ['I am interested in everything related to Artificial Intelligence.', 'Like, how will technological syngularity come about and what exactly will happen after?', ' Will we be ready for it, culturally and politically?' ],
+    option: 'Hmmmm...'
+  },
+  {
+    msgs: ['Would you like to get in touch?'],
+    option: 'Maybe...'
+  },
+  {
+    msgs: ['All right, it was fun chatting with you!', 'Contact me on Linkedin, Twitter, or check out my GitHub profile' ],
     option: undefined
   }
 ];
 
 
 
-// var options   = [];
+
 
 function scrollToBottom() {
   var winH = $(window).height();
   var docH = $(document).height();
 
   if (docH > winH) {
-    console.log(' should scroll');
+    // console.log(' should scroll');
     // chatContainer.scrollTop(scrollHeight);
+
     $(window).scrollTop($(document).height() + 70);
+
+
   }
 }
 
 
-// creazy functions that send sequentialy messages and "waits" typingSpeed seconds between each.
+// creazy function that sends sequentialy messages and "waits" typingSpeed seconds between each.
 function sendBatch(batch, i = 0) {
+  //sends the first message from current step
   sendMsg(flow[batch].msgs[i]);
+  //if next message from current step exists, send it
   if (flow[batch].msgs[i+1]) {
+    //send it after typingSpeed seconds (currently we are rendering typing animation)
     setTimeout(function () {
       sendMsg(flow[batch].msgs[i+1]);
+      //if we have more to say, lets say it
       if (flow[batch].msgs[i+2]) {
         setTimeout(function () {
           sendBatch(batch, i+2)  //call itself
         }, typingSpeed)
-      } else {
+      }
+      //nothing more to say right now
+      else {
+        //we are still rendering that last message....
         setTimeout(function () {
+          //if there is an option available (we are not in the end of conversation) - display it
           if (flow[batch].option) {
               displayOption(flow[batch].option);
-          } else {
+          }
+          //we have finished, lext show contact options
+          else {
             contactOptions();
           }
         }, typingSpeed + 200);
@@ -107,12 +130,11 @@ function typing() {
   html4.append(htmldot1)
   html4.append(htmldot2)
   html4.append(htmldot3)
-  html4.fadeIn(1000);
+  html4.fadeIn(transitionSpeed);
   // $(html4).addClass('zoomIn');
 
-
   scrollToBottom()
-  // scrollToBottom()
+
   setTimeout(function() {
     html1.remove();
   }, typingSpeed);
@@ -128,13 +150,12 @@ function messageFromMe(msg) {
   html3.hide();
   // html2.hide();
 
-
   chatContainer = $(document.getElementsByClassName('chat-container'));
   // console.log(chatContainer);
   chatContainer.append(html1);
   html1.append(html2);
   html2.after(html3);
-  $(html3).fadeIn(1000);
+  $(html3).fadeIn(transitionSpeed);
   // $(html3).addClass('zoomIn');
   scrollToBottom()
   // sleep(1000);
@@ -155,8 +176,8 @@ function displayOption(option) {
   scrollToBottom()
   $(html2).on('click touchstart',  function(event) {
     event.preventDefault();
-    console.log('clicked!!!');
-    $(html1).fadeOut(1000)
+    // console.log('clicked!!!');
+    $(html1).fadeOut(transitionSpeed)
     setOption(option);
   });
 
@@ -174,7 +195,7 @@ function setOption(option) {
     chatContainer.append(html1);
     html1.append(html2);
     html2.after(html3);
-    html3.fadeIn(1000);
+    html3.fadeIn(transitionSpeed);
     // console.log(step);
     setTimeout(function () {
       step++;
