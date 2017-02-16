@@ -153,7 +153,7 @@ function displayOption(option) {
   chatContainer.after(html1);
   html1.append(html2);
   scrollToBottom()
-  $(html2).on('click touchstart',  function() {
+  $(html2).on('click touchstart',  function(event) {
     event.preventDefault();
     console.log('clicked!!!');
     $(html1).fadeOut(1000)
