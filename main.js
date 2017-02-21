@@ -24,8 +24,12 @@ var flow     = [
     option: "That's cool. What do you like to do?",
   },
   {
-    msgs: ['I like to read, a lot!',  'Mostly non fiction, blogs, essays, opinions, especially on hacker news, medium.com and Pocket.', 'Anything from personal development, science, software, tech, business... ','Books as well!', 'Recently read...', 'Essentialism by Greg McKeown', 'The Power of Habit by Charles Duhigg', 'The Obstacle is the Way from Ryan Holiday'],
-    option: 'Ahaaa, what else?'
+    msgs: ['I like to read, a lot!',  'Mostly non fiction, blogs, essays, opinions, especially on hacker news, medium.com and Pocket.', 'Anything from personal development, science, software, tech, business... ','Books as well!'],
+    option: 'what books?'
+  },
+  {
+    msgs: ['Recently read...', 'Essentialism by Greg McKeown', 'The Power of Habit by Charles Duhigg', 'The Obstacle is the Way from Ryan Holiday'],
+    option: 'Ahaa, other interest?'
   },
   {
     msgs: ['I am interested in everything related to Artificial Intelligence.', 'Like, how will technological syngularity come about and what exactly will happen after?', ' Are we going to be ready for it, culturally and politically?' ],
@@ -36,7 +40,7 @@ var flow     = [
     option: 'Maybe...'
   },
   {
-    msgs: ['All right, thanks for the chat  !', 'Contact me on Linkedin, Twitter, or check out my GitHub profile.' ],
+    msgs: ['All right, it was nice chatting with you!', 'Contact me on Linkedin, Twitter, or check out my GitHub profile.', 'Gotta go!' ],
     option: undefined
   }
 ];
