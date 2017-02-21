@@ -148,6 +148,8 @@ h1,h3 {
 
 .chat-line {
   margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .right-bubble {
