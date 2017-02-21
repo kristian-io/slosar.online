@@ -70,8 +70,8 @@ body {
   /*border: 1px solid white;*/
   /*height: 100%;*/
   /*padding: 20px;*/
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: white;
   box-shadow: 0px 1px 1px gray;
   border-radius: 4px;
@@ -288,7 +288,7 @@ h1,h3 {
     top: -5px;
   }
 }
-@-webkit-keyframes bounce1 {
+/*@-webkit-keyframes bounce1 {
   from {
     position: relative;
     top: 3px;
@@ -309,7 +309,7 @@ h1,h3 {
     position: relative;
     top: -5px;
   }
-}
+}*/
 
 @keyframes bounce2 {
   from {
@@ -322,7 +322,20 @@ h1,h3 {
     top: -5px;
   }
 }
-@-webkit-keyframes bounce2 {
+/*@-webkit-keyframes bounce2 {
+  from {
+    position: relative;
+    top: 3px;
+  }
+
+  to {
+    position: relative;
+    top: -5px;
+  }
+}*/
+
+
+@keyframes bounce3 {
   from {
     position: relative;
     top: 3px;
@@ -333,7 +346,17 @@ h1,h3 {
     top: -5px;
   }
 }
+/*@-webkit-keyframes bounce3 {
+  from {
+    position: relative;
+    top: 3px;
+  }
 
+  to {
+    position: relative;
+    top: -5px;
+  }
+}
 @-webkit-keyframes bounce3 {
   from {
     position: relative;
@@ -344,18 +367,7 @@ h1,h3 {
     position: relative;
     top: -5px;
   }
-}
-@-webkit-keyframes bounce3 {
-  from {
-    position: relative;
-    top: 3px;
-  }
-
-  to {
-    position: relative;
-    top: -5px;
-  }
-}
+}*/
 
 
 /*mobile devices*/
@@ -370,5 +382,9 @@ h1,h3 {
     width: 40px;
     /*position: relative;*/
     /*top: 20px;*/
+  }
+  .aboutme {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
