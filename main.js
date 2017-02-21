@@ -7,9 +7,8 @@ $( document ).ready(function() {
 
 //initialize vars and flow array
 var step = 0;
-var typingSpeed = 2000;
-var transitionSpeed = 1500;
-
+var typingSpeed = 2500;
+var transitionSpeed = 800;
 
 var flow     = [
   {
@@ -116,10 +115,18 @@ function typing() {
   html3 = $('<div class="col-10"></div>');
   html4 = $('<span class="bubble"></span>')
 
-  htmldot1 = $('<span id="dot1">&nbsp;&nbsp;&nbsp;&#8226</span>');
-  htmldot2 = $('<span id="dot2">&nbsp;&#8226&nbsp;</span>');
-  htmldot3 = $('<span id="dot3">&#8226&nbsp;&nbsp;&nbsp;</span>');
+//&bull
 
+  htmldot1 = $('<span id="dot1">&nbsp;&nbsp;&nbsp;&bull;</span>');
+  htmldot2 = $('<span id="dot2">&nbsp;&bull;&nbsp;</span>');
+  htmldot3 = $('<span id="dot3">&bull;&nbsp;&nbsp;&nbsp;</span>');
+
+
+  // htmldot1 = $('<span id="dot1">&nbsp;&nbsp;&nbsp;&#8226</span>');
+  // htmldot2 = $('<span id="dot2">&nbsp;&#8226&nbsp;</span>');
+  // htmldot3 = $('<span id="dot3">&#8226&nbsp;&nbsp;&nbsp;</span>');
+
+  html2.hide();
   html4.hide();
 
   chatContainer = $(document.getElementsByClassName('chat-container'));
@@ -148,7 +155,7 @@ function messageFromMe(msg) {
   html2 = $('<div class="col-1 pic-space"><img class="my-pic" src="./img/me.jpg" alt="Profile photo"></div>');
   html3 = $(`<div class="col-10"><span class="bubble">${msg}</span></div>`);
   html3.hide();
-  // html2.hide();
+  html2.hide();
 
   chatContainer = $(document.getElementsByClassName('chat-container'));
   // console.log(chatContainer);
