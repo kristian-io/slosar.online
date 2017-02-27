@@ -32,7 +32,7 @@ var flow     = [
     option: 'Ahaa, other interest?'
   },
   {
-    msgs: ['I am interested in everything related to Artificial Intelligence.', 'Like, how will technological syngularity come about and what exactly will happen after?', ' Are we going to be ready for it, culturally and politically?' ],
+    msgs: ['I am interested in everything related to Artificial Intelligence.', 'Like, how will technological singularity come about and what exactly will happen after?', ' Are we going to be ready for it, culturally and politically?' ],
     option: 'Hmmmm...'
   },
   {
