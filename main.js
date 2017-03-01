@@ -25,7 +25,7 @@ var flow     = [
   },
   {
     msgs: ['I like to read, a lot!',  'Mostly non fiction, blogs, essays, opinions, especially on hacker news, medium.com and Pocket.', 'Anything from personal development, science, software, tech, business... ','Books as well!'],
-    option: 'what books?'
+    option: 'What books?'
   },
   {
     msgs: ['Recently read...', 'Essentialism by Greg McKeown', 'The Power of Habit by Charles Duhigg', 'The Obstacle is the Way from Ryan Holiday'],
