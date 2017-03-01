@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
 //initialize vars and flow array
 var step = 0;
-var typingSpeed = 2500;
+var typingSpeed = 1500;
 var transitionSpeed = 800;
 
 var flow     = [
