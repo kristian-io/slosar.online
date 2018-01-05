@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
 //initialize vars and flow array
 var step = 0;
-var typingSpeed = 1500;
+var typingSpeed = 1200;
 var transitionSpeed = 800;
 
 var flow     = [
@@ -16,11 +16,11 @@ var flow     = [
     option: 'Hi. Who are you???',
   },
   {
-    msgs: ['My name is Kristian Slosar, I am 24 years old, currently living in Bratislava, Slovakia,', 'Europe,', 'Earth,', ' &#x2661 Milky Way!' ],
+    msgs: ['My name is Kristian Slosar, I am 25 years old, currently living in Bratislava, Slovakia,', 'Europe,', 'Earth,', ' &#x2661 Milky Way!' ],
     option: 'What do you do? ',
   },
   {
-    msgs: ['I enjoy coding/ developing, currently learning full stack javascript, apart from that I work in IT.', 'I think and dream a lot about tech, culture and the future!'],
+    msgs: ['I enjoy programing (javascript), learning about machine learning :) and apart from that I work @ Amazon.', 'I think and dream a lot about tech, culture and the future!'],
     option: "That's cool. What do you like to do?",
   },
   {
